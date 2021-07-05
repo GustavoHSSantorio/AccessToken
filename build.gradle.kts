@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.gradle.internal.CacheImplementation
 
 buildscript {
     repositories {
+        mavenLocal()
         google()
         jcenter()
         mavenCentral()

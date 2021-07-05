@@ -1,4 +1,3 @@
-
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.32")
     implementation("androidx.core:core-ktx:1.5.0")

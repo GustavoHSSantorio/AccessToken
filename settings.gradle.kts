@@ -1,4 +1,5 @@
 include(
     ":app",
-    ":accessplugin")
-rootProject.name = "AccessToken"
+    ":credentials"
+)
+rootProject.name = "XPInc.Plugins.Android"

@@ -1,0 +1,16 @@
+trigger:
+- main
+
+pool:
+  vmImage: macos-latest
+
+steps:
+  - task: Gradle@2
+    displayName: 'Gradle publish'
+    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    inputs:
+      gradleWrapperFile: 'gradlew'
+      tasks: 'publish'
+      publishJUnitResults: false
+      javaHomeOption: 'JDKVersion'
+      sonarQubeRunAnalysis: false
