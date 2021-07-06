@@ -19,7 +19,7 @@ object Credentials{
     val map : HashMap<String, Credential> = hashMapOf()
 }
 
-abstract class AccessTokenTask : DefaultTask(){
+abstract class CredentialsTask : DefaultTask(){
 
     @get:Input
     abstract val credentialFile : Property<String>
@@ -52,16 +52,16 @@ abstract class AccessTokenTask : DefaultTask(){
     }
 }
 
-class AccessTokenPlugin : Plugin<Project> {
+class CredentialsPlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
             target.buildscript {
-                target.tasks.register("generateAccessToken", AccessTokenTask::class.java){
+                target.tasks.register("getCredentials", CredentialsTask::class.java){
                     credentialFile.set("settings.xml")
                     getAccessToken()
                 }
 
-                println(target.tasks.getByPath("generateAccessToken").path)
+                println(target.tasks.getByPath("getCredentials").path)
             }
     }
 }
