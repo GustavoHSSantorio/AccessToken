@@ -2,4 +2,4 @@ include(
     ":app",
     ":credentials"
 )
-rootProject.name = "XPInc.Plugins.Android"
+rootProject.name = "Credentials"
