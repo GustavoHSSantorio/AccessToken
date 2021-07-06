@@ -13,10 +13,10 @@ import java.io.File
 import java.io.FileNotFoundException
 
 
-data class XPCredential(var versionEnvironment: String, var versionToken: String)
+data class Credential(var versionEnvironment: String, var versionToken: String)
 
-object XPCredentials{
-    val map : HashMap<String, XPCredential> = hashMapOf()
+object Credentials{
+    val map : HashMap<String, Credential> = hashMapOf()
 }
 
 abstract class AccessTokenTask : DefaultTask(){
@@ -30,7 +30,7 @@ abstract class AccessTokenTask : DefaultTask(){
 
         settings?.forEach {
             (it as? NodeChild)?.run {
-                XPCredentials.map[getProperty("id").toString()] = XPCredential(
+                Credentials.map[getProperty("id").toString()] = Credential(
                     getProperty("username").toString(),
                     getProperty("password").toString()
                 )
