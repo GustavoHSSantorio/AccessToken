@@ -18,7 +18,7 @@ gradlePlugin {
             group = "org.github.gustavohssantorio"
             id = "org.github.gustavohssantorio.credentials"
             version = "0.0.1"
-            implementationClass = "AccessTokenPlugin"
+            implementationClass = "CredentialsPlugin"
             displayName = "Credentials Access Plugin"
             description = "A plugin get to all credentials in settings.xml, and access it on build.gradle"
         }
