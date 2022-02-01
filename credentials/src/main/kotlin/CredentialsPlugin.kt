@@ -1,7 +1,7 @@
-import groovy.xml.XmlSlurper
-import groovy.xml.slurpersupport.GPathResult
-import groovy.xml.slurpersupport.NodeChild
-import groovy.xml.slurpersupport.NodeChildren
+import groovy.util.XmlSlurper
+import groovy.util.slurpersupport.GPathResult
+import groovy.util.slurpersupport.NodeChild
+import groovy.util.slurpersupport.NodeChildren
 import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -16,12 +16,8 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.text.SimpleDateFormat
 import java.time.Instant
-import java.time.LocalDate
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
 import java.util.*
 import java.util.concurrent.TimeUnit
-import kotlin.collections.HashMap
 
 
 data class Credential(var versionEnvironment: String, var versionToken: String)
